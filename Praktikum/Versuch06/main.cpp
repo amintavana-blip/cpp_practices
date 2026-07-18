@@ -20,7 +20,7 @@ int main()
     char abfrage;
 
     // AUFGABE 6.4.2.5: Die alte Abfrage und das automatische Füllen auskommentieren!
-    /*
+    
     std::cout << "Wollen Sie die Liste selbst fuellen? (j)/(n) ";
     std::cin >> abfrage;
     std::cin.ignore(10, '\n');
@@ -38,7 +38,7 @@ int main()
         student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wuellnerstr.9");
         studentenListe.push_back(student);
     }
-    */
+    
 
     do
     {

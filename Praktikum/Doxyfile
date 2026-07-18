@@ -1,0 +1,50 @@
+# =============================================================================
+# Doxygen Konfigurationsdatei für Praktikum Informatik 1 (RWTH)
+# Versuche 06, 07 und 08
+# =============================================================================
+
+# Name des Projekts
+PROJECT_NAME           = "Praktikum Informatik 1"
+PROJECT_NUMBER         = "MMXXVI"
+Brief_DESCRIPTION      = "Dokumentation der Versuche 6 (STL), 7 (Operatoren) und 8 (Polymorphie)"
+
+# Ausgabesprache der Dokumentation (Deutsch)
+OUTPUT_LANGUAGE        = German
+
+# Pfade zu den Quelldateien der drei Versuche
+# (Doxygen sucht hier rekursiv nach allen .h, .cpp und .h-Dateien)
+INPUT                  = ./Versuch06 \
+                         ./Versuch07 \
+                         ./Versuch08
+
+# Auch Unterordner durchsuchen
+RECURSIVE              = YES
+
+# Dateimuster, die berücksichtigt werden sollen
+FILE_PATTERNS          = *.cpp \
+                         *.h
+
+# Verzeichnis, in dem die fertige Dokumentation gespeichert wird
+OUTPUT_DIRECTORY       = ./doc
+
+# Formatierungseinstellungen
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+
+# Warnungen aktivieren (falls du vergessen hast, eine Funktion zu dokumentieren)
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+
+# Zeige auch private Member und statische Variablen in der Dokumentation
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Grafische Klassendiagramme (falls 'Graphviz' auf deinem PC installiert ist)
+HAVE_DOT               = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+TEMPLATE_RELATIONS     = YES
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES

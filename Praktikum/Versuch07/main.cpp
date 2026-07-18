@@ -8,7 +8,7 @@
 #include <vector>
 #include <fstream>
 #include <iterator>
-#include <algorithm> // NEU: Für std::sort und std::find
+#include <algorithm>
 
 #include "Student.h"
 
@@ -115,14 +115,11 @@ int main()
                     std::cin >> matNrSuche;
                     std::cin.ignore(10, '\n');
 
-                    // Genialer Trick: Wir erstellen einen "Dummy"-Studenten nur mit der gesuchten Matrikelnummer.
-                    // Da std::find unseren neuen == Operator benutzt (der nur Matrikelnummern vergleicht), 
-                    // findet er den richtigen Studenten!
                     Student dummyStudent(matNrSuche, "", "", "");
 
                     std::vector<Student>::iterator it = std::find(studentenListe.begin(), studentenListe.end(), dummyStudent);
 
-                    if (it != studentenListe.end()) // Wurde gefunden?
+                    if (it != studentenListe.end()) 
                     {
                         std::cout << "Der folgende Student ist geloescht worden:\n";
                         std::cout << *it; // Ausgabe des gefundenen Studenten

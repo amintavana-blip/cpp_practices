@@ -2,7 +2,7 @@
 #define STUDENT_H_
 
 #include <string>
-#include <ostream> // NEU: Für std::ostream
+#include <ostream>
 
 class Student
 {
@@ -18,7 +18,6 @@ public:
     void ausgabe(std::ostream& out) const;
 
     // AUFGABE 7.2.1.1: Operatorenüberladung (Vergleich anhand der Matrikelnummer)
-    // Das 'const' am Ende ist extrem wichtig für die STL!
     bool operator==(const Student& other) const;
     bool operator<(const Student& other) const;
     bool operator>(const Student& other) const;
@@ -30,7 +29,7 @@ private:
     std::string adresse;
 };
 
-// AUFGABE 7.2.1.3: Überladung des Ausgabe-Operators (außerhalb der Klasse!)
+// AUFGABE 7.2.1.3: Überladung des Ausgabe-Operators
 std::ostream& operator<<(std::ostream& out, const Student& student);
 
 #endif
